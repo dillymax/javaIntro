@@ -1,0 +1,80 @@
+		java 
+			
+hdd->ram->micro processor(cpu)
+
+hdd -> storage type -> files    (magnetic technology used ,its nature is slow)
+ram -> storage type ->bytes    (semi-conductor technology used so its naturally fast)
+mp  -> storage type ->register (semi-conductor technology used )
+
+
+hdd->RAM->MP
+*ram is faster than hdd (when sending information to processor)
+*register is faster than RAM
+
+source code(index.java) ->comipler ->bytecode ->jvm ->MLL -> processor
+
+compiler ->convert source code into bytecode(intermidiate code it is portable)
+jdk ->java development kit (using this you can write and run the java code)
+jre ->java run time environment (OS will set up the environment for jre in RAM )
+jvm -> java virtual machine (inside jre we have jvm + library tools)
+
+
+github most commonly used comments
+git init
+git status
+git add index.txt
+git add -a
+git add .
+git log
+git commit -m "first version"
+git add remote origin url
+git push -u master
+git congif
+git config -list
+etc need to write more comments
+
+eg:
+class FirstProgram
+{
+public static void main(String args[])
+{
+System.out.println("hello world");
+}
+}
+
+main method -> is starting point java program because whenever you run code then  jvm will first 
+search the main method to start execute
+
+static ->if you using static keyword(reserve word) in method , 
+then jvm will not create object to access that method ,jvm direcly accessthat method
+
+void ->its does'nt return anything instead void you can other return type alsoe eg : int , String , boolean etc
+
+public ->when you make your method as public then that method can visible to everywhere or accessible to accross(entire) the project.
+
+*In one java file you can write n number of classes but you must specify main method in one class for starting point of code
+*when you make your class as public then that class name should be as file name otherwise it will error
+
+indentifier
+*its means names in java
+*eg : class name , method name , varibles name and lable name .
+
+reserve words or keywords
+*already jvm have specail meaning for these keywords
+*eg : if , else etc
+
+datatypes
+byte
+short
+int
+long
+double
+flote
+boolean
+
+*during runtme jvm will allocate memorys in RAM
+*so be carefull to create datatypes because whenever you creating more varibles then that time if your Ram size  is small  during
+runtime it will throw error
+
+
+
