@@ -104,5 +104,6 @@ type casting
 
 1, byte->short->int->long->float->long
 left to right(implicit type casting)
-rght to left (explicit type casting)
+2, byte<-short<-int<-long<-float<-long
+right to left (explicit type casting)
 
