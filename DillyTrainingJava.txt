@@ -9,7 +9,7 @@ mp  -> storage type ->register (semi-conductor technology used )
 
 hdd->RAM->MP
 *ram is faster than hdd (when sending information to processor)
-*register is faster than RAM
+*register is faster than byte(ram)
 
 source code(index.java) ->comipler ->bytecode ->jvm ->MLL -> processor
 
@@ -77,4 +77,28 @@ boolean
 runtime it will throw error
 
 
+COMPOSER
+
+*when you perform with wholeNumber as a direct literal then composer treat that whole number as int only 
+either we can store byte or short
+eg:
+int a =10; (valid)
+
+*whenever you perform integer by integer it will lead truncation to Zero irrespective of where you store 
+int a=25;
+int b=2;       real value is 12.5
+int c =a/b;   //12    truncation to Zero
+float d =a/b; //12.0  truncation to Zero
+*whenever you perform with varibles then composer came into the picture for type check because java is strictly type cheacked language
+eg :
+int a =10; (valid)
+byte b=a; (invalid)Compile time error (here complier will check int can store in byte , answer is no )
+
+type casting
+*implicit type casting
+*explicit type casting
+
+1, byte->short->int->long->float->long
+left to right(implicit type casting)
+rght to left (explicit type casting)
 
