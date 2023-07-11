@@ -83,6 +83,10 @@ COMPOSER
 either we can store byte or short
 eg:
 int a =10; (valid)
+*when you perform with realNumber as a direct literal then composer treat that real number as double only 
+float a = 10.5;  (invalid) 
+float b = 10.5f; (valid)  here realNumber as a direct literal then composer treat that real number as double only 
+                          so we put suffix 'f' at the end and to telling composer don't treat as double treat as float 
 
 *whenever you perform integer by integer it will lead truncation to Zero irrespective of where you store 
 int a=25;
