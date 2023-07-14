@@ -102,8 +102,32 @@ type casting
 *implicit type casting
 *explicit type casting
 
-1, byte->short->int->long->float->long
+1,char->byte->short->int->long->float->long
 left to right(implicit type casting)
 2, byte<-short<-int<-long<-float<-long
 right to left (explicit type casting)
 
+
+class Student{
+    //by default jvm will fill the varibles with default values in heap area when you create obj for Student
+    //instance varible
+    int id;
+    int age;
+    String name;
+}
+class Student{
+    int a;  //
+    public static void main(){
+        //creating obj using new keyword and storing into the Student type varible
+        //std ->refference varible
+    Student std = new Student();
+    std.name = "dilly";
+    std.age =22;
+    }
+}
+
+//default value for datatypes
+int ->0
+boolean ->false
+float ->0.0
+string ->null
