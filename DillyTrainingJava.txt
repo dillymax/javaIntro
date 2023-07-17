@@ -78,7 +78,7 @@ runtime it will throw error
 
 
 COMPOSER
-
+*when perform with whole with using any of operator then the resultant will be int only irrespective of where its store
 *when you perform with wholeNumber as a direct literal then composer treat that whole number as int only 
 either we can store byte or short
 eg:
@@ -86,7 +86,7 @@ int a =10; (valid)
 *when you perform with realNumber as a direct literal then composer treat that real number as double only 
 float a = 10.5;  (invalid) 
 float b = 10.5f; (valid)  here realNumber as a direct literal then composer treat that real number as double only 
-                          so we put suffix 'f' at the end and to telling composer don't treat as double treat as float 
+                          so we put suffix 'f' at the end and to telling composer don't treat as double , treat as float 
 
 *whenever you perform integer by integer it will lead truncation to Zero irrespective of where you store 
 int a=25;
@@ -97,6 +97,11 @@ float d =a/b; //12.0  truncation to Zero
 eg :
 int a =10; (valid)
 byte b=a; (invalid)Compile time error (here complier will check int can store in byte , answer is no )
+*jvm only allocate memorys varible and assign values to the varibles during , 
+compiler can,t assign values varibles it will only type check
+eg:
+int a=10;
+int b=a+1;
 
 type casting
 *implicit type casting
@@ -116,10 +121,15 @@ class Student{
     String name;
 }
 class Student{
-    int a;  //
+     //instance varible
+    int a; 
     public static void main(){
         //creating obj using new keyword and storing into the Student type varible
-        //std ->refference varible
+        //std ->refference varible because we here storing Student type object
+int local ;
+System.out.println(local) //0
+System.out.println(local); //CE : because jvm only initialize default values to 
+                                  instance varible only not an local varible so we should initial local varible
     Student std = new Student();
     std.name = "dilly";
     std.age =22;
@@ -131,3 +141,16 @@ int ->0
 boolean ->false
 float ->0.0
 string ->null
+
+//DURING EXCUTION(RUN TIME) TIME JVM WILL ALLOCATE MEMORIES AND EXCUTE 
+//HEAP AND STACK AND METHOD AREA
+RAM->JRE->JVM+library files.
+
+*JVM search main method in method area and invoking that method and put it into the stack area because 
+main thread start excute whichever present in stack area only otherwise program didn'nt execute
+
+METHOD AREA
+We have .class files HERE DURING runtime
+HEAP AREA
+*whenever you create obj in program  , jvm will allocate memorys for 
+obj in  heap area at the same time jvm will  allocate memorys for instance varible and fill with default vaules in part of obj
