@@ -78,7 +78,7 @@ runtime it will throw error
 
 
 COMPOSER
-*when perform with whole with using any of operator then the resultant will be int only irrespective of where its store
+*when perform with whole number with using any of operator then the resultant will be int only irrespective of where its store
 *when you perform with wholeNumber as a direct literal then composer treat that whole number as int only 
 either we can store byte or short
 eg:
@@ -93,11 +93,12 @@ int a=25;
 int b=2;       real value is 12.5
 int c =a/b;   //12    truncation to Zero
 float d =a/b; //12.0  truncation to Zero
-*whenever you perform with varibles then composer came into the picture for type check because java is strictly type cheacked language
+*whenever you perform with varibles then composer came into the picture for type check because java is strictly type 
+cheacked language
 eg :
 int a =10; (valid)
 byte b=a; (invalid)Compile time error (here complier will check int can store in byte , answer is no )
-*jvm only allocate memorys varible and assign values to the varibles during , 
+*jvm only allocate memorys for varible and assign values to the varibles during runtime , 
 compiler can,t assign values varibles it will only type check
 eg:
 int a=10;
@@ -129,7 +130,9 @@ class Student{
 int local ;
 System.out.println(local) //0
 System.out.println(local); //CE : because jvm only initialize default values to 
-                                  instance varible only not an local varible so we should initial local varible
+                                  instance varible only not an local varible so we should initial local varible ,
+                                  if you declared is not a issue when you using that local variable without initialize 
+                                  the value then that compile time error
     Student std = new Student();
     std.name = "dilly";
     std.age =22;
@@ -154,3 +157,21 @@ We have .class files HERE DURING runtime
 HEAP AREA
 *whenever you create obj in program  , jvm will allocate memorys for 
 obj in  heap area at the same time jvm will  allocate memorys for instance varible and fill with default vaules in part of obj
+
+Method overloading
+*method name is same and type signature is different is called as method overloading.
+return type maybe same or may not be same it doesn't matter
+->1:many method overloading concept is one method doing one activity only so its false polymorphism.
+comiler will resolve issue of method overloading or compile time polymorphism.
+*compiler will check
+1->number of parameters had method
+2->number of data type  had method
+3->order of the type of the parameters  
+
+
+Array
+*it is store large amount data in single variable
+*array treated as object , using new keyword we creat array
+eg :  int a[] = new int[5];
+*array space will be allocated in heap area
+*it will be store homogenes(same data type values) type data.
