@@ -1,0 +1,6 @@
+we can use mulitiple lang in genesys 
+configure->you can add languages in supported lang settings in every callflows eg:inbound , bot flow etc
+how to achive ?
+using set lang block 
+*In inbound if we use to set lang in set lang block ,lang will change when it will reached to another task only ,withing same task it will not chnage lang
+*bot flow whenever you set lang in set lang block then after the block only lang changed

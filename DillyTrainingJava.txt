@@ -1,5 +1,7 @@
 		java 
 			
+ In java ; its is valid  statement;
+
 hdd->ram->micro processor(cpu)
 
 hdd -> storage type -> files    (magnetic technology used ,its nature is slow)
@@ -78,6 +80,8 @@ runtime it will throw error
 
 
 COMPOSER
+*if composer can't perform operation then it will check syntax part and type check only, 
+it can perform operation whenever we using direct litral
 *when perform with whole number with using any of operator then the resultant will be int only irrespective of where its store
 *when you perform with wholeNumber as a direct literal then composer treat that whole number as int only 
 either we can store byte or short
@@ -104,7 +108,7 @@ eg:
 int a=10;
 int b=a+1;
 
-type casting
+Type Casting
 *implicit type casting
 *explicit type casting
 
@@ -130,7 +134,7 @@ class Student{
 int local ;
 System.out.println(local) //0
 System.out.println(local); //CE : because jvm only initialize default values to 
-                                  instance varible only not an local varible so we should initial local varible ,
+                                  instance varible in heap area only not an local varible so we should initial local varible ,
                                   if you declared is not a issue when you using that local variable without initialize 
                                   the value then that compile time error
     Student std = new Student();
@@ -147,16 +151,24 @@ string ->null
 
 //DURING EXCUTION(RUN TIME) TIME JVM WILL ALLOCATE MEMORIES AND EXCUTE 
 //HEAP AND STACK AND METHOD AREA
+RAM->collections of bytes
 RAM->JRE->JVM+library files.
 
 *JVM search main method in method area and invoking that method and put it into the stack area because 
-main thread start excute whichever present in stack area only otherwise program didn'nt execute
+main thread start excute whichever method present in stack area only otherwise program didn'nt execute anything.
 
 METHOD AREA
 We have .class files HERE DURING runtime
 HEAP AREA
 *whenever you create obj in program  , jvm will allocate memorys for 
 obj in  heap area at the same time jvm will  allocate memorys for instance varible and fill with default vaules in part of obj
+
+Stack Area:
+*JVM search main method in method area and invoking that method and put it into the stack area that time 
+one stack frame will be created because main thread start excute whichever method present in stack area only
+ otherwise program didn'nt execute anything.
+*jvm will allocate memorys for local variable in stack area ,this variable scope is available untill method execute complete.
+*whenever you calling one method that time one stack fram will be created on stack area.
 
 Method overloading
 *method name is same and type signature is different is called as method overloading.
@@ -168,6 +180,16 @@ comiler will resolve issue of method overloading or compile time polymorphism.
 2->number of data type  had method
 3->order of the type of the parameters  
 
+loop
+----
+n-1
+n-1/4
+n-1/2
+n*3/4
+
+diagonal one ->i==j         eg :\
+diagonal two ->i+j==n-1     eg :/
+
 
 Array
 *it is store large amount data in single variable
@@ -175,3 +197,94 @@ Array
 eg :  int a[] = new int[5];
 *array space will be allocated in heap area
 *it will be store homogenes(same data type values) type data.
+
+one dimensional array
+new int[5];
+two dimensional array
+new int[3][3]
+multi dimensional array
+new int[][][];
+
+2D JAGGED Array
+int [] a =new int[3][];
+a.[0]=new int[4];
+a.[1]=new int[4];
+a.[3]=new int[4];
+
+*without class we dont create object
+
+advantage of array;
+*if array size is known to you and storing similar type of 
+data go for array not collections because array is fast and more efficient.
+
+Disadvantage:
+*Array store homogenes(same data type) type data only.
+*Array need contigueous memory location.
+
+loop concept :
+for(statement1;statement2;statement3){
+    statement4;
+}
+statement1 ->it can be any statement ,we would suggest for initailization purpose
+statement2 ->it should be return boolean type 
+statement3 ->it can be any statement , we would suggest for increment/decrement variable
+statement4 ->it can be any statement
+
+while loop:
+*here initailization and incrementation is optional
+while(statement1){
+statement2
+}
+statement1 ->it should be return boolean type 
+statement2 ->it can be any statement.
+
+Do While Loop:
+do{
+statement2
+}while(statement1)
+statement1 ->it should be return boolean type 
+statement2 ->it can be any statement.
+
+Enhanced For Loop/For each loop:
+for(datatype variable : arrayName){
+    statement;
+}
+
+eg:
+int [] a =new int[3];
+a[0]=1;
+a[1]=2;
+a[2]=3;
+for(int elem : a){ //here 'a' will get one element at a time from array and to store that element int type varibale
+    System.out.println(elem);
+}
+
+Auto Array:1D
+int a = {1,2,3,4}; // new int[5];
+
+Auto Array:2D  
+//3 class each class will have different number of Students
+int a = {{1,2,3,4},{1,2,3},{1,2,3,4}};  // new int[3][3]
+
+Auto Array:3D 
+ //here 1 school have class each class will have different number of Students
+int a = {{{1,2,3,4},{1,2,3},{1,2,3,4}}}; // new int[][][];
+
+eg:
+public class Array1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//3D array 
+		//2 school , 2 class ,each different number of students
+		int[][][] a={
+				{{1,2},{1,2}} ,
+				{{9,10},{11,12}}
+				};
+		System.out.println(a[1][0][1]);
+	}
+
+}
+
+
+
+
