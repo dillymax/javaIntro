@@ -4,3 +4,13 @@ how to achive ?
 using set lang block 
 *In inbound if we use to set lang in set lang block ,lang will change when it will reached to another task only ,withing same task it will not chnage lang
 *bot flow whenever you set lang in set lang block then after the block only lang changed
+
+RONA->ring on no answer.
+TRASFER TO QUEUE
+*In genesys if transfer the call to ivr to inQueue flow(QUEUE) ,first Genesys will search 
+available(active agents) and who is free then genesys directly transfer the call to the agent.then wait for agent to pick the call.
+how long it will be wait ?
+here RONA came into the picture ,here only we are going set the time how long it will be wait for agent to pick the call.
+if agents available and free meant call will be transfer to particular agent.
+if agents not available and agent isn't free means following InQueue logic will be executed..
+

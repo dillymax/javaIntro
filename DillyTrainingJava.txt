@@ -197,6 +197,9 @@ Array
 eg :  int a[] = new int[5];
 *array space will be allocated in heap area
 *it will be store homogenes(same data type values) type data.
+*array size will be byte , short , int ,char type only.
+*every primitive type array will have classes that class not for developers ,its only for jvm at runtime.
+
 
 one dimensional array
 new int[5];
@@ -284,6 +287,27 @@ public class Array1 {
 	}
 
 }
+
+
+
+STRING:
+memory :heap area , inside heap area we scp area(string constant pool)
+mutable string  ->string
+immutable string->stringbuilder , stringbuffer.
+
+STRING:
+*It is class , so we can creat obj for string.
+eg:
+String str = "dilly";
+*whenever you perform with the direct litral,that obj will be created in scp only not in heap area.
+*garbage collector concept not work in scp area.
+
+b,
+String str = new String("dilly");
+*whenever you create string using new keyword with litral , 
+that time obj will be created in heap area and one copy will be maitean in scp also for jvm purpose.
+but no one reffering that obj .but doesn'nt get deleted because garbage collector concept not work in scp area.
+
 
 
 
