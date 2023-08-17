@@ -309,6 +309,64 @@ that time obj will be created in heap area and one copy will be maitean in scp a
 but no one reffering that obj .but doesn'nt get deleted because garbage collector concept not work in scp area.
 
 
+note:
+*In String If compiler can eveluvate then memory will be allocated in scp area 
+*In String if JVM can evaluvate then memory will be allocate in heap area
+
+Stringbuffer vs stringbuilder
+*stringbuffer and stringbuilder is almost same and having most methods as common.
+*Stringbuffer is Synchronized 
+*stringBuilder is not Synchronized
+
+
+static
+
+STATIC VARIABLE,BLOCK , METHOD
+
+JVM ARCHITECT
+During .class file loading jvm have three sub-system
+1.loading
+2.linking
+3.initialization
+
+1.loading ->loading have three parts namely
+
+extension and application class loader will load our .class and giving delegate to 
+bootstrap loader to load inbuilt class what we used in our code. eg:scanner etc
+then all work together giving that class to linking sub-system
+*extension class loader  
+*aplication class loader 
+*bootstrap class loader 
+
+2.linking ->having three parts 
+*verify   ->it will verify our code like a hacker . any hacking or suspciouse thing happenden our cde
+*prepare  ->it will check any VIP are there ,here VIP are static varibale.
+            if static varibale are present in our code then jvm invoke the code put into stack area then 
+			that will execute first then memory will be allocated in heap area
+*resolve  ->it will resolve everthing giving responsibility to the initialization sub-system of loading.
+
+3.initialization 
+*here jvm excute static block .jvm invoke static block and put into the stack area.
+
+
+after loading jvm will invoke all the .class files put into the method area.
+then jvm search and invoke the static method of main method and put into the stack for to excute our code
+
+pc registers:
+*In stack area during execution each statements will have some address that address stored in pc register
+*in java this is ; considered as one statement
+
+excution engine:
+*intrepreter
+
+priority of execution
+*static variable 
+*static block
+*static method
+*instance variable
+*java block or initialization block 
+*super or this method
+*constructor body
 
 
 
