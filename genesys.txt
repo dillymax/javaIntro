@@ -14,3 +14,20 @@ here RONA came into the picture ,here only we are going set the time how long it
 if agents available and free meant call will be transfer to particular agent.
 if agents not available and agent isn't free means following InQueue logic will be executed..
 
+Data action in genesys pure cloud 
+*we can do three different way of authentication (for O-auth purpose)
+1.During Integration 
+step 1: click Integration tab and click add Integration
+step 2: install 'Genesys Cloud Data Actions' (for O-auth purpose)
+step 3: then creandential tab click and  congifuge creandential
+
+2.giving authentication things in headers in action
+3.
+
+
+Web Services Data Actions  ->custom O-Auth purpose.
+Credential Type
+*basic auth    ->selecting this you can giving creandential to headers in action
+*user define   ->selecting this you can 
+*user define o auth
+Genesys Cloud Data Actions ->using genesys client and secrete id for O-Auth

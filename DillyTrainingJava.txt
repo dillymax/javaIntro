@@ -368,5 +368,23 @@ priority of execution
 *super or this method
 *constructor body
 
+Inheritance
+*parent can have mulitiple child but  child can't have mulitiple parent
+
+*SUPER keyword is present to access parent class instance variable
+*super() method to call parent class constructor.
+*this() method to call another constructor within the same class
+*this keyword is holding current object refference
+
+Inheritance supporte
+*single and multi level hierarchy Inheritance
+*mulitiple level Inheritance will not be supported in java
+
+final keyword
+*class   ->we can't Inherite 
+*method  ->we can inherite but we can't overidden this final method
+*variable ->we can't change again once we initialized
+
+
 
 
